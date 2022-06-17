@@ -20,9 +20,17 @@
     for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
     <div class="socialaccount_ballot">
+      <div>
+        <a href="{% provider_login_url "google" process="connect" %}" style="margin: 20px;">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABYElEQVRIieXVO0scYRTG8Z+Xwko0EMMaRQgpjOWCfSA2hlSCoNZByEcIaVMHtkgQv4D4DbRKkKiICNpEYquuNmKwM8tmU8wOGWdn55ZKfODA8HKe/znvvDcegp7jA77jHL9xiT18xFRZ8COsoIFWSjSxhpEi8EmcZIDjcdZuKlMVnBaE/8G7PPAe7CQADrCAx+28YcwJ1qWJt3ngsJgA/4S+lIam88JhPwZfK2LO0rjgX4bwW4z+L7Q/8l0VTDnUV9QTPPNYzuC2MItmtEAllnTcxTyBmYwC8AT13hyJZdWCaIGLWELpK6AN/xUfHNO5yE8TzAOCcxCN1+7uvh/dKse36bq7C5+kHmzEfF+6JS/oPGg16QetluCppnWznWA4xJJ/N+Yg3uBbQu5m2nQpd9mFcSXYxpmaxM+C8Bu8zAMPNYTPghcsC76LF0XgUT3De2wJHpUGrnGEVbwqC74f+gsL/Z79dQlZNgAAAABJRU5ErkJggg=="/>
+      </a>
+      <a href="{% provider_login_url "facebook" process="connect" %}" style="margin: 20px;">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABpElEQVRIie3WO2tUQRjG8Z/iBexsVEyy3hstUoil2CvqitirkEoS/ToqSpo0QQvBD2BhGXuTKl7Au+AqGkPCWuwJToY9k3fPhlR5YOBw5n3m/74zc84M29oi7RggtoWruISjGK3ev8cinuMZ3m1WciO4jxV0N2irmK0SG0pt/AwA89bBlabQu3oVDApNq58aFNoeEPoDf2rg4cpHxab3M25hf+Ldi5dZXAeHI+BHAehvnKnxv+gT/3AjaEts9z7IfLsxjrN41Sd+xf/Pr68mA9AubiSefVgIeO6koJ0Z+GIpq0QfkucLOBXwrBs7Bx8Pgv8mzweCnhMlcGj3ZYr+dkdKnb/Ur9H5IKBuvTtpUF7xp+DgddqDYzV9H0vg+SHBJ7Grpm+hZLynfqpfY65qpxPP5eT9fME/WQIfwXLBvNbOJZ6bgfhljKWgfKrfYKaUWUNNC1wQWvhu8yr+ps/vMq8Y3mKiMg2rLm7rXY/CmlB/JkcqXq3GaKTr+NoA/AXXmkLXdAiPsRQAL+md5weHheYJTOGp9ZeANp7o3dGiB8a2tk7/ALB6+MZLhtiUAAAAAElFTkSuQmCC"/>
+      </a>
 
-      <div class="socialaccount_providers">
-        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+      <a href="{% provider_login_url "github" process="connect" %}" style="margin: 20px;">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAB0ElEQVRIie3WPWtUQRTG8V8SMEE7C41JDBK1tVZBIgo2QhJBrW0sFNQirZXfQiW+oJUQMJhgI/gJbKy0E7QLRFzBl5i4Fvdec507921XUuWByzJzz3P+58zO7Cw72iYNtIidxCzO4xAm0vlP+IBlLOHj/ypuHHexgW7Ns4lnaWF9aQ5fGwDDp4OZXqG3JB20hea7v9kWOtcnNA9v3PmE4vIexzEs1IAW0riTubkOxpqAY8mHg9WYxj4MpZ+n0/lMI4H/fh10Unz3HmlScU5HA/+GreMHBgPDbNpFqP0twaPBeCjNXaqXit0utoRmWgryrFQFv4+AT/QIPhXkeVcV3ImAh6sMFdoT5OnkX4bfcTjWB3gkGP+zd0LQaiTBdI/g0BfL/Vcrikv9RrH6Ou3G2yDPiyrDfATcxSsNf30k5/V1JMd8lekg1kvg3/AAlzAV+KZwGY/wPeJdx4G6ip/kDFfwPFLAucBzBj9KCu7icR2U5OJfSw2r2IunaeLPuF3iu1MC/aJBt5ku2roWrzb0HI5AN3GhKTTTdfyW/Kc6q35nD0ag19pCM81IljefsEpZzJoeOg01hnv41QD8Ew8Vb6e+NIob2FXyfkDzs76j7dMfXTjhKzmestYAAAAASUVORK5CYII="/>
+      </a>
       </div>
 
       <div class="login-or border-top border-bottom my-3">{% trans 'OR' %}</div>

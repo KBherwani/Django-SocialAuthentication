@@ -1,10 +1,26 @@
 {% extends 'account/base.html' %}
-
+{% load socialaccount %}
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 {% block content %}
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
     <div class="text-center">
-        <h2>Home</h2>
-        <p>Hello {{ user.first_name }}!</p>
-        <p>Your Username : {{ user }}</p>
-        <a class="btn btn-dark" href="{% url 'socialaccount_connections' %}">Settings</a>
+        <h2>SOCIAL AUTHENTICATION</h2>
+        <p>Hello {% if request.user.is_authenticated %}{{ user.first_name }}{% endif %}!</p>
+        {% if request.user.is_authenticated %}<p>Your Username : {{ user }}</p>
+        {% else %}
+        <p>Please SignIn or SignUp </p>
+        {% endif %}
+        <div class="text-center">
+            {% if user.is_authenticated %}
+            <a class="btn"style="background: black;color: white"  href="{% url 'account_email' %}">Change E-mail</a>
+            <a class="btn"style="background: black;color: white"  href="{% url 'home' %}">Home</a>
+            <a class="btn"style="background: black;color: white"  href="{% url 'account_logout' %}">Sign Out</a>
+            {% else %}
+            <a class="btn"style="background: black;color: white" href="{% url 'account_login' %}">Sign In</a>
+            <a class="btn"style="background: black;color: white" href="{% url 'account_signup' %}">Sign Up</a>
+            {% endif %}
+        </div>
+        <a class="btn"style="background: darkblue;color: white;margin-top: 20px;" href="{% url 'socialaccount_connections' %}">Settings</a>
     </div>
 {% endblock %}
