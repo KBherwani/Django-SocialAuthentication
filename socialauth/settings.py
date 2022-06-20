@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.linkedin_oauth2',
     'crispy_forms',
 ]
 
@@ -147,6 +148,20 @@ SOCIALACCOUNT_PROVIDERS = {
             'repo',
             'read:org',
         ],
+    },
+    'linkedin': {
+        'SCOPE': [
+            'r_basicprofile',
+            'r_emailaddress'
+        ],
+        'PROFILE_FIELDS': [
+            'id',
+            'first-name',
+            'last-name',
+            'email-address',
+            'picture-url',
+            'public-profile-url',
+        ]
     }
 }
 
